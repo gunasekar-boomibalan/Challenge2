@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">challenge2</string>
+    <string name="add_new_child">Add New Child</string>
+    <string name="home_page">Home Page</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="created_on">Created On</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="gender">Gender</string>
+</resources>

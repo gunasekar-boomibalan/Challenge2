@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:padding="24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/title"
+        android:text="Add New Child"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="0dp"
+        android:text="Name "
+        android:textAllCaps="true"
+        android:layout_marginTop="24dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/name"/>
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@+id/nameLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/nameLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameLabel"/>
+    <TextView
+        android:layout_marginTop="24dp"
+        android:id="@+id/dobLable"
+        android:layout_width="0dp"
+        android:paddingVertical="8dp"
+        android:layout_height="wrap_content"
+        android:text="Date Of Birth"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dob"/>
+    <TextView
+        android:id="@+id/dob"
+        android:layout_width="0dp"
+        android:paddingVertical="8dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@+id/dobLable"
+        app:layout_constraintStart_toEndOf="@+id/dobLable"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/genderLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Gender"
+        android:textAllCaps="true"
+
+        app:layout_constraintTop_toTopOf="@+id/male_check"
+        app:layout_constraintBottom_toBottomOf="@+id/female_check"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/male_check"/>
+    <CheckBox
+        android:paddingVertical="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/male_check"
+        app:layout_constraintTop_toBottomOf="@+id/dobLable"
+        app:layout_constraintStart_toStartOf="@+id/dob" />
+    <TextView
+        android:id="@+id/male"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:textAllCaps="true"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/male_check"
+        app:layout_constraintTop_toTopOf="@+id/male_check"
+        app:layout_constraintStart_toEndOf="@+id/male_check"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:layout_width="30dp"
+        android:gravity="center"
+        android:layout_height="30dp"
+        android:id="@+id/female_check"
+        app:layout_constraintTop_toBottomOf="@+id/male_check"
+        app:layout_constraintStart_toStartOf="@+id/male_check"
+        app:layout_constraintEnd_toStartOf="@+id/female"/>
+    <TextView
+        android:id="@+id/female"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="FeMale"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="@+id/dob"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/female_check"
+        app:layout_constraintTop_toTopOf="@+id/female_check"
+        app:layout_constraintStart_toEndOf="@+id/female_check"/>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/genderLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="24dp"
+        android:textColor="@color/white"
+        android:text="Save"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
